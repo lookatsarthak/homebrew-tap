@@ -9,20 +9,35 @@ brew install --cask lookatsarthak/tap/notchfun
 
 ## First launch
 
-NotchFun is not notarised by Apple, so macOS will refuse to open it the first time and
-say it "could not verify NotchFun is free of malware". That is what macOS says about any
-app distributed outside the App Store without a paid Apple Developer account.
+NotchFun is not notarised by Apple, so macOS blocks it the first time and says it
+"could not verify NotchFun is free of malware". macOS says this about **any** app
+distributed outside the App Store without a paid Apple Developer account — it is not a
+finding about this app.
 
-Homebrew quarantines cask installs by default, so you will still see it. Either:
+Homebrew quarantines cask installs, so you will see it here too. Two ways past it:
+
+**Approve it once in System Settings** (the normal route)
+
+1. Double-click NotchFun, then click **Done** — *not* Move to Bin.
+2. **System Settings → Privacy & Security**, scroll to **Security**.
+3. Next to "NotchFun was blocked to protect your Mac", click **Open Anyway**.
+
+**Or clear the quarantine flag yourself**
 
 ```bash
-brew install --cask --no-quarantine lookatsarthak/tap/notchfun
+xattr -dr com.apple.quarantine /Applications/NotchFun.app
 ```
 
-or install normally and then approve it once in **System Settings → Privacy & Security →
-Open Anyway**.
+Only needed once, either way.
 
 ## Updating
 
-NotchFun updates itself through Sparkle, so `brew upgrade` is not required — though the
-cask is kept current with each release.
+NotchFun updates itself through Sparkle, so `brew upgrade` isn't required — but the cask
+is kept in step with each release.
+
+## Uninstalling
+
+```bash
+brew uninstall --cask notchfun          # remove the app
+brew uninstall --zap --cask notchfun    # ...and its settings and clipboard history
+```
