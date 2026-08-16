@@ -15,7 +15,7 @@ cask "notchfun" do
 
   # Updates itself through Sparkle, so Homebrew should not fight it.
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "NotchFun.app"
 
