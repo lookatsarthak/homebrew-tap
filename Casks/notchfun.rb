@@ -1,6 +1,6 @@
 cask "notchfun" do
-  version "1.0.0"
-  sha256 "f5b1490a0e15291d1d7cf38533f041376324b859eddc301057e19799f8839c23"
+  version "1.3.0"
+  sha256 "cef3f74015a0cb0ba0db34b0ad435db26948fa78499dd03918f68c855866e479"
 
   url "https://github.com/lookatsarthak/NotchFun/releases/download/v#{version}/NotchFun-#{version}.dmg",
       verified: "github.com/lookatsarthak/NotchFun/"
@@ -15,7 +15,7 @@ cask "notchfun" do
 
   # Updates itself through Sparkle, so Homebrew should not fight it.
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :tahoe
 
   app "NotchFun.app"
 
