@@ -1,6 +1,6 @@
 cask "notchfun" do
-  version "1.3.0"
-  sha256 "cef3f74015a0cb0ba0db34b0ad435db26948fa78499dd03918f68c855866e479"
+  version "1.3.1"
+  sha256 "3f2914cc1e2e2bb4672dc3ea678e5c9704c03f6accee84f57d4d939111a48eb1"
 
   url "https://github.com/lookatsarthak/NotchFun/releases/download/v#{version}/NotchFun-#{version}.dmg",
       verified: "github.com/lookatsarthak/NotchFun/"
