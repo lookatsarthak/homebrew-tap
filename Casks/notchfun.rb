@@ -6,7 +6,7 @@ cask "notchfun" do
       verified: "github.com/lookatsarthak/NotchFun/"
   name "NotchFun"
   desc "Clipboard manager, media controller, calendar and file shelf in the MacBook notch"
-  homepage "https://github.com/lookatsarthak/NotchFun"
+  homepage "https://lookatsarthak.github.io/NotchFun/"
 
   livecheck do
     url :url
@@ -20,6 +20,11 @@ cask "notchfun" do
   app "NotchFun.app"
 
   uninstall quit: "io.github.lookatsarthak.notchfun"
+
+  caveats <<~EOS
+    NotchFun isn't notarised by Apple, so macOS asks once before the first launch:
+    open NotchFun, click Done, then System Settings → Privacy & Security → Open Anyway.
+  EOS
 
   zap trash: [
     "~/Library/Application Support/NotchFun",
