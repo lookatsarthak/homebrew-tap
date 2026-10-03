@@ -4,8 +4,7 @@ cask "notchfun" do
 
   # Goes through NotchFun's own backend, which counts the install (anonymously) and
   # redirects to this version's disk image on GitHub Releases.
-  url "https://notchfun.lookatsarthak.workers.dev/brew/#{version}",
-      verified: "notchfun.lookatsarthak.workers.dev/"
+  url "https://notchfun.lookatsarthak.workers.dev/brew/#{version}"
   name "NotchFun"
   desc "Clipboard manager, media controller, calendar and file shelf in the MacBook notch"
   homepage "https://lookatsarthak.github.io/NotchFun/"
