@@ -1,6 +1,6 @@
 cask "notchfun" do
-  version "1.6.1"
-  sha256 "4596fb8c50f88dda13c5d57a9476ae1c2c25e1daaf2ac240a868e323877a65ef"
+  version "1.6.2"
+  sha256 "cf217559edf982dbff7e325d258d46d6715eeb8bfb2b604379aa6f97f97f81bd"
 
   # Goes through NotchFun's own backend, which counts the install (anonymously) and
   # redirects to this version's disk image on GitHub Releases.
